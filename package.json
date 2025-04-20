@@ -7,24 +7,24 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./arrays": {
+      "types": "./dist/arrays/index.d.ts",
       "import": "./dist/arrays/index.js",
-      "require": "./dist/arrays/index.cjs",
-      "types": "./dist/arrays/index.d.ts"
+      "require": "./dist/arrays/index.cjs"
     },
     "./sleep": {
+      "types": "./dist/sleep/index.d.ts",
       "import": "./dist/sleep/index.js",
-      "require": "./dist/sleep/index.cjs",
-      "types": "./dist/sleep/index.d.ts"
+      "require": "./dist/sleep/index.cjs"
     },
     "./valid8": {
+      "types": "./dist/valid8/index.d.ts",
       "import": "./dist/valid8/index.js",
-      "require": "./dist/valid8/index.cjs",
-      "types": "./dist/valid8/index.d.ts"
+      "require": "./dist/valid8/index.cjs"
     }
   },
   "files": [
@@ -51,6 +51,7 @@
   },
   "homepage": "https://github.com/percuss-io/utils#readme",
   "devDependencies": {
+    "@types/node": "^22.14.1",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3",
     "vitest": "^3.1.1"
