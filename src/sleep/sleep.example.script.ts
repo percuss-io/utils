@@ -12,10 +12,10 @@ async function main() {
     await sleep(1000);
   }
 
-  console.log('Done!');
+  console.log(`Done!`);
 }
 main().catch((err: unknown) => {
-  console.error('ERROR:', err);
+  console.error(`ERROR:`, err);
 
   process.exit(1);
 });
