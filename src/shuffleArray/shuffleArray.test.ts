@@ -44,8 +44,8 @@ describe(`shuffleArray`, () => {
     let callCount = 0;
 
     vi.spyOn(Math, `random`).mockImplementation(
-      // eslint-disable-next-line no-return-assign
-      () => mockRandomValues[(callCount += 1)],
+      // eslint-disable-next-line
+      () => mockRandomValues[callCount++],
     );
 
     const result = shuffleArray(input);
