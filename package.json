@@ -1,0 +1,68 @@
+{
+  "name": "@percuss.io/utils",
+  "version": "0.0.1",
+  "description": "utils",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./isNonEmptyObj": {
+      "types": "./dist/isNonEmptyObj/isNonEmptyObj.d.ts",
+      "import": "./dist/isNonEmptyObj/isNonEmptyObj.js",
+      "require": "./dist/isNonEmptyObj/isNonEmptyObj.cjs"
+    },
+    "./shuffleArray": {
+      "types": "./dist/shuffleArray/shuffleArray.d.ts",
+      "import": "./dist/shuffleArray/shuffleArray.js",
+      "require": "./dist/shuffleArray/shuffleArray.cjs"
+    },
+    "./sleep": {
+      "types": "./dist/sleep/sleep.d.ts",
+      "import": "./dist/sleep/sleep.js",
+      "require": "./dist/sleep/sleep.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src",
+    "prerelease": "./scripts/prerelease.sh",
+    "shipit": "./scripts/publish.sh",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/percuss-io/utils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/percuss-io/utils/issues"
+  },
+  "homepage": "https://github.com/percuss-io/utils#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@percuss.io/eslint-config-ericcarraway": "5.0.1-beta.14",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@types/node": "^22.14.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-sort-destructure-keys": "^2.0.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vitest": "^3.1.1"
+  }
+}
