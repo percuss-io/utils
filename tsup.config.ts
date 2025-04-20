@@ -5,9 +5,9 @@ export default defineConfig({
   dts: true,
   entry: [
     `src/index.ts`,
-    `src/arrays/index.ts`,
-    `src/sleep/index.ts`,
-    `src/valid8/index.ts`,
+    `src/isNonEmptyObj/isNonEmptyObj.ts`,
+    `src/shuffleArray/shuffleArray.ts`,
+    `src/sleep/sleep.ts`,
   ],
   format: [`cjs`, `esm`],
   splitting: true,

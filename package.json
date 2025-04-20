@@ -11,20 +11,20 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./arrays": {
-      "types": "./dist/arrays/index.d.ts",
-      "import": "./dist/arrays/index.js",
-      "require": "./dist/arrays/index.cjs"
+    "./isNonEmptyObj": {
+      "types": "./dist/isNonEmptyObj/isNonEmptyObj.d.ts",
+      "import": "./dist/isNonEmptyObj/isNonEmptyObj.js",
+      "require": "./dist/isNonEmptyObj/isNonEmptyObj.cjs"
+    },
+    "./shuffleArray": {
+      "types": "./dist/shuffleArray/shuffleArray.d.ts",
+      "import": "./dist/shuffleArray/shuffleArray.js",
+      "require": "./dist/shuffleArray/shuffleArray.cjs"
     },
     "./sleep": {
-      "types": "./dist/sleep/index.d.ts",
-      "import": "./dist/sleep/index.js",
-      "require": "./dist/sleep/index.cjs"
-    },
-    "./valid8": {
-      "types": "./dist/valid8/index.d.ts",
-      "import": "./dist/valid8/index.js",
-      "require": "./dist/valid8/index.cjs"
+      "types": "./dist/sleep/sleep.d.ts",
+      "import": "./dist/sleep/sleep.js",
+      "require": "./dist/sleep/sleep.cjs"
     }
   },
   "files": [
