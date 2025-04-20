@@ -1,3 +1,4 @@
+/* global module */
 module.exports = {
   arrowParens: `always`,
   bracketSameLine: false,
@@ -14,6 +15,8 @@ module.exports = {
   tabWidth: 2,
   trailingComma: `all`,
   useTabs: false,
+
+  // eslint-disable-next-line sort-keys
   overrides: [
     {
       files: [`*.yml`],

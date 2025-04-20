@@ -50,6 +50,7 @@ const lintConfig = tseslint.config(
             `*.cjs`,
             `*.js`,
             `*.mjs`,
+            `*.config.ts`,
           ],
         },
         tsconfigRootDir: directory,
