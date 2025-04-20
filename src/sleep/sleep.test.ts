@@ -29,11 +29,11 @@ describe(`sleep`, () => {
     expect(end - start).toBeLessThan(10);
   });
 
-  it(`should call setTimeout with the correct duration`, () => {
+  it(`should call setTimeout with the correct duration`, async () => {
     /* global globalThis */
     const setTimeoutSpy = vi.spyOn(globalThis, `setTimeout`);
 
-    sleep(500);
+    await sleep(500);
 
     expect(setTimeoutSpy).toHaveBeenCalledWith(expect.any(Function), 500);
   });

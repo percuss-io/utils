@@ -2,6 +2,7 @@
  * npx vite-node src/sleep/sleep.example.script.ts
  */
 
+import console from 'node:console';
 import process from 'node:process';
 
 import { sleep } from './sleep';

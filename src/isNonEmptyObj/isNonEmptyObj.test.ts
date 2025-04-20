@@ -26,7 +26,7 @@ describe(`isNonEmptyObj`, () => {
   });
 
   it(`should return false for non-object types`, () => {
-    expect(isNonEmptyObj(undefined)).toBe(false);
+    expect(isNonEmptyObj(undefined)).toBe(false); // eslint-disable-line no-undefined
     expect(isNonEmptyObj(true)).toBe(false);
     expect(isNonEmptyObj(false)).toBe(false);
     expect(isNonEmptyObj(Symbol(`symbol`))).toBe(false);
