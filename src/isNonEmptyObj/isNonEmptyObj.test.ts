@@ -32,4 +32,29 @@ describe(`isNonEmptyObj`, () => {
     expect(isNonEmptyObj(`string`)).toBe(false);
     expect(isNonEmptyObj(123)).toBe(false);
   });
+
+  it(`should return false for objects with only inherited properties`, () => {
+    const proto = { inherited: `yep` };
+    const obj = Object.create(proto);
+
+    expect(isNonEmptyObj(obj)).toBe(false);
+  });
+
+  it(`should return false for objects with only symbol keys`, () => {
+    const sym = Symbol(`foo`);
+    const obj = { [sym]: `bar` };
+
+    expect(isNonEmptyObj(obj)).toBe(false);
+  });
+
+  it(`should return false for Object.create(null) with no props`, () => {
+    expect(isNonEmptyObj(Object.create(null))).toBe(false);
+  });
+
+  it(`should return true for Object.create(null) with props`, () => {
+    const obj = Object.create(null);
+    obj.foo = `bar`;
+
+    expect(isNonEmptyObj(obj)).toBe(true);
+  });
 });
