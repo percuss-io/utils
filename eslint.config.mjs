@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 import eslint from '@eslint/js';
 import {
   baseRules,
+  deprecatedNodeCommonJsRules,
   disabledBasePersonalRules,
   disabledTypescriptExtensionRules,
   disabledTypescriptPersonalRules,
@@ -65,6 +66,7 @@ const lintConfig = tseslint.config(
   {
     rules: {
       ...baseRules,
+      ...deprecatedNodeCommonJsRules,
       ...disabledBasePersonalRules,
       ...disabledTypescriptExtensionRules,
       ...disabledTypescriptPersonalRules,
