@@ -3,6 +3,7 @@
  */
 
 import { describe, expect, it, vi } from 'vitest';
+
 import { shuffleArray } from './shuffleArray';
 
 describe(`shuffleArray`, () => {
@@ -43,7 +44,8 @@ describe(`shuffleArray`, () => {
     let callCount = 0;
 
     vi.spyOn(Math, `random`).mockImplementation(
-      () => mockRandomValues[callCount++],
+      // eslint-disable-next-line no-return-assign
+      () => mockRandomValues[(callCount += 1)],
     );
 
     const result = shuffleArray(input);

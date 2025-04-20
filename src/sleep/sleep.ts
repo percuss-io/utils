@@ -7,7 +7,7 @@
  * ```
  */
 export function sleep(millis: number): Promise<void> {
-  if (typeof millis !== 'number' || !Number.isFinite(millis) || millis < 0) {
+  if (typeof millis !== `number` || !Number.isFinite(millis) || millis < 0) {
     throw new TypeError(
       `sleep(millis): expected a non-negative finite number, got ${millis}`,
     );

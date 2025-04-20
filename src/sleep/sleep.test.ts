@@ -3,6 +3,7 @@
  */
 
 import { describe, expect, it, vi } from 'vitest';
+
 import { sleep } from './sleep';
 
 describe(`sleep`, () => {
@@ -13,6 +14,7 @@ describe(`sleep`, () => {
     await sleep(duration);
 
     const end = Date.now();
+
     expect(end - start).toBeGreaterThanOrEqual(duration);
   });
 
@@ -28,6 +30,7 @@ describe(`sleep`, () => {
   });
 
   it(`should call setTimeout with the correct duration`, () => {
+    /* global globalThis */
     const setTimeoutSpy = vi.spyOn(globalThis, `setTimeout`);
 
     sleep(500);

@@ -3,6 +3,7 @@
  */
 
 import { describe, expect, it } from 'vitest';
+
 import { isNonEmptyObj } from './isNonEmptyObj';
 
 describe(`isNonEmptyObj`, () => {
@@ -53,6 +54,7 @@ describe(`isNonEmptyObj`, () => {
 
   it(`should return true for Object.create(null) with props`, () => {
     const obj = Object.create(null);
+
     obj.foo = `bar`;
 
     expect(isNonEmptyObj(obj)).toBe(true);

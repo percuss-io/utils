@@ -3,6 +3,7 @@
  */
 
 import process from 'node:process';
+
 import { sleep } from './sleep';
 
 async function main() {
