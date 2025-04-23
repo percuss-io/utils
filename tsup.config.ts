@@ -12,6 +12,12 @@ export default defineConfig({
     `src/sleep/sleep.ts`,
   ],
   format: [`cjs`, `esm`],
+  outExtension({ format }) {
+    return {
+      // eslint-disable-next-line @stylistic/multiline-ternary
+      js: format === `cjs` ? `.cjs` : `.js`,
+    };
+  },
   splitting: true,
   treeshake: true,
 });
