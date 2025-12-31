@@ -2,7 +2,7 @@
   "name": "@percuss.io/utils",
   "version": "0.0.2",
   "description": "utils",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -47,7 +47,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/percuss-io/utils/issues"
   },
