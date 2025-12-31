@@ -14,7 +14,6 @@ export function sleep(millis: number): Promise<void> {
   }
 
   return new Promise((resolve) => {
-    /* global globalThis */
     globalThis.setTimeout(resolve, millis);
   });
 }
