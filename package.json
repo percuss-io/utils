@@ -7,24 +7,44 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./isNonEmptyObj": {
-      "types": "./dist/isNonEmptyObj/isNonEmptyObj.d.ts",
-      "import": "./dist/isNonEmptyObj/isNonEmptyObj.js",
-      "require": "./dist/isNonEmptyObj/isNonEmptyObj.cjs"
+      "import": {
+        "types": "./dist/isNonEmptyObj/isNonEmptyObj.d.ts",
+        "default": "./dist/isNonEmptyObj/isNonEmptyObj.js"
+      },
+      "require": {
+        "types": "./dist/isNonEmptyObj/isNonEmptyObj.d.cts",
+        "default": "./dist/isNonEmptyObj/isNonEmptyObj.cjs"
+      }
     },
     "./shuffleArray": {
-      "types": "./dist/shuffleArray/shuffleArray.d.ts",
-      "import": "./dist/shuffleArray/shuffleArray.js",
-      "require": "./dist/shuffleArray/shuffleArray.cjs"
+      "import": {
+        "types": "./dist/shuffleArray/shuffleArray.d.ts",
+        "default": "./dist/shuffleArray/shuffleArray.js"
+      },
+      "require": {
+        "types": "./dist/shuffleArray/shuffleArray.d.cts",
+        "default": "./dist/shuffleArray/shuffleArray.cjs"
+      }
     },
     "./sleep": {
-      "types": "./dist/sleep/sleep.d.ts",
-      "import": "./dist/sleep/sleep.js",
-      "require": "./dist/sleep/sleep.cjs"
+      "import": {
+        "types": "./dist/sleep/sleep.d.ts",
+        "default": "./dist/sleep/sleep.js"
+      },
+      "require": {
+        "types": "./dist/sleep/sleep.d.cts",
+        "default": "./dist/sleep/sleep.cjs"
+      }
     }
   },
   "files": [
