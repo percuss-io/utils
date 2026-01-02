@@ -3,6 +3,7 @@
  */
 // @ts-check
 
+// eslint-disable-next-line simple-import-sort/imports
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -20,26 +21,25 @@ import {
   typescriptRules,
 } from '@percuss.io/eslint-config-ericcarraway';
 import stylistic from '@stylistic/eslint-plugin';
-import { flatConfigs as eslintPluginImport } from 'eslint-plugin-import';
+import * as importPlugin from 'eslint-plugin-import';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sortDestructureKeys from 'eslint-plugin-sort-destructure-keys';
-import tseslint, { configs as tseslintConfigs } from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
+import { configs as tseslintConfigs } from 'typescript-eslint';
 
 const directory = dirname(fileURLToPath(import.meta.url));
 
-const lintConfig = tseslint.config(
+const lintConfig = defineConfig(
   {
     ignores: [
       //
     ],
   },
+
   eslint.configs.recommended,
-
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  eslintPluginImport.recommended,
-
   tseslintConfigs.strictTypeChecked,
   tseslintConfigs.stylisticTypeChecked,
+
   {
     languageOptions: {
       parserOptions: {
@@ -60,7 +60,10 @@ const lintConfig = tseslint.config(
   {
     plugins: {
       '@stylistic': stylistic,
+      import: importPlugin,
       'simple-import-sort': simpleImportSort,
+
+      // @ts-expect-error TypeScript types are problematic for this plugin.
       'sort-destructure-keys': sortDestructureKeys,
     },
   },
@@ -78,7 +81,12 @@ const lintConfig = tseslint.config(
       ...typescriptRules,
     },
   },
+  {
+    files: [`./eslint.config.mjs`, `./tsup.config.ts`, `./vitest.config.ts`],
+    rules: {
+      'import/no-default-export': `off`,
+    },
+  },
 );
 
-// eslint-disable-next-line import/no-default-export
 export default lintConfig;

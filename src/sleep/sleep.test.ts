@@ -30,7 +30,6 @@ describe(`sleep`, () => {
   });
 
   it(`should call setTimeout with the correct duration`, async () => {
-    /* global globalThis */
     const setTimeoutSpy = vi.spyOn(globalThis, `setTimeout`);
 
     await sleep(500);

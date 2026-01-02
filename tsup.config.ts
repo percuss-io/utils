@@ -1,7 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { defineConfig } from 'tsup';
 
-// eslint-disable-next-line import/no-default-export
 export default defineConfig({
   clean: true,
   dts: true,
@@ -12,6 +11,11 @@ export default defineConfig({
     `src/sleep/sleep.ts`,
   ],
   format: [`cjs`, `esm`],
+  outExtension({ format }) {
+    return {
+      js: format === `cjs` ? `.cjs` : `.js`,
+    };
+  },
   splitting: true,
   treeshake: true,
 });

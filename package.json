@@ -1,30 +1,50 @@
 {
   "name": "@percuss.io/utils",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "utils",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     },
     "./isNonEmptyObj": {
-      "types": "./dist/isNonEmptyObj/isNonEmptyObj.d.ts",
-      "import": "./dist/isNonEmptyObj/isNonEmptyObj.js",
-      "require": "./dist/isNonEmptyObj/isNonEmptyObj.cjs"
+      "import": {
+        "types": "./dist/isNonEmptyObj/isNonEmptyObj.d.ts",
+        "default": "./dist/isNonEmptyObj/isNonEmptyObj.js"
+      },
+      "require": {
+        "types": "./dist/isNonEmptyObj/isNonEmptyObj.d.cts",
+        "default": "./dist/isNonEmptyObj/isNonEmptyObj.cjs"
+      }
     },
     "./shuffleArray": {
-      "types": "./dist/shuffleArray/shuffleArray.d.ts",
-      "import": "./dist/shuffleArray/shuffleArray.js",
-      "require": "./dist/shuffleArray/shuffleArray.cjs"
+      "import": {
+        "types": "./dist/shuffleArray/shuffleArray.d.ts",
+        "default": "./dist/shuffleArray/shuffleArray.js"
+      },
+      "require": {
+        "types": "./dist/shuffleArray/shuffleArray.d.cts",
+        "default": "./dist/shuffleArray/shuffleArray.cjs"
+      }
     },
     "./sleep": {
-      "types": "./dist/sleep/sleep.d.ts",
-      "import": "./dist/sleep/sleep.js",
-      "require": "./dist/sleep/sleep.cjs"
+      "import": {
+        "types": "./dist/sleep/sleep.d.ts",
+        "default": "./dist/sleep/sleep.js"
+      },
+      "require": {
+        "types": "./dist/sleep/sleep.d.cts",
+        "default": "./dist/sleep/sleep.cjs"
+      }
     }
   },
   "files": [
@@ -45,24 +65,24 @@
     "url": "git+https://github.com/percuss-io/utils.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eric L Carraway",
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/percuss-io/utils/issues"
   },
   "homepage": "https://github.com/percuss-io/utils#readme",
   "devDependencies": {
-    "@eslint/js": "^9.25.0",
-    "@percuss.io/eslint-config-ericcarraway": "5.0.1-beta.14",
-    "@stylistic/eslint-plugin": "^4.2.0",
-    "@types/node": "^22.14.1",
-    "eslint-plugin-import": "^2.31.0",
+    "@eslint/js": "^9.39.2",
+    "@percuss.io/eslint-config-ericcarraway": "^7.1.0",
+    "@stylistic/eslint-plugin": "^5.6.1",
+    "@types/node": "^25.0.3",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
-    "tsup": "^8.4.0",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.30.1",
-    "vitest": "^3.1.1"
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.51.0",
+    "vitest": "^4.0.16"
   }
 }
